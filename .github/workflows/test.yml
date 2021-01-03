@@ -11,10 +11,12 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Unit Tests
         run: yarn test:unit
-      - name: Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
-        with: 
+        with:
+          flags: unittests
           files: ./coverage/clover.xml, ./coverage/coverage-final.json
+          name: cypress-tests
       - name: E2E tests
         env: 
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
