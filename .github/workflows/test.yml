@@ -6,11 +6,15 @@ jobs:
     name: Test
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Unit Tests
         run: yarn test:unit
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+        with: 
+          files: ./coverage/clover.xml, ./coverage/coverage-final.json
       - name: E2E tests
         env: 
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
