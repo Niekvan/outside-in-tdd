@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/Niekvan/outside-in-tdd/branch/main/graph/badge.svg?token=XN843QYKTO)](https://codecov.io/gh/Niekvan/outside-in-tdd)
+
+
 # opinion-ate
 
 An app for tracking reviews of dishes at different restaurants.
