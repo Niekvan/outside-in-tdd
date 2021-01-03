@@ -1,8 +1,11 @@
-import {createStore} from 'vuex';
+import { createStore } from 'vuex';
+import api from '@/api';
+
+import restaurants from './restaurants';
 
 export default createStore({
   state: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: { restaurants: restaurants(api) },
 });
