@@ -1,33 +1,39 @@
 # opinion-ate
 
+An app for tracking reviews of dishes at different restaurants.
+
+Production: https://outside-in-tdd.netlify.app
+
 ## Project setup
+Dependencies are locked with a `yarn.lock` file, so please use `yarn` and not `npm` for installing them.
+
 ```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn run serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn run build
 ```
 
 ### Run your unit tests
 ```
-npm run test:unit
+yarn run test:unit
 ```
 
 ### Run your end-to-end tests
 ```
-npm run test:e2e
+yarn run test:e2e
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+yarn run lint
 ```
 
 ### Customize configuration
