@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <h1>Restaurants</h1>
-    <RestaurantList />
-  </div>
+  <Card>
+    <template #title>
+      Restaurants
+    </template>
+    <template #content>
+      <RestaurantList />
+    </template>
+  </Card>
 </template>
 
 <script>
+import Card from 'primevue/card';
+
 import RestaurantList from '@/components/RestaurantList';
 
 export default {
   name: 'RestaurantScreen',
-  components: { RestaurantList },
+  components: { Card, RestaurantList },
 };
 </script>

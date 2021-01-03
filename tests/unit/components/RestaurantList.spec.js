@@ -1,5 +1,7 @@
 import { createStore } from 'vuex';
 import { mount } from '@vue/test-utils';
+import PrimeVue from 'primevue/config';
+
 import RestaurantList from '@/components/RestaurantList';
 
 const findByTestId = (wrapper, testId, index) =>
@@ -29,7 +31,7 @@ describe('RestaurantList', () => {
       },
     });
 
-    wrapper = mount(RestaurantList, { global: { plugins: [store] } });
+    wrapper = mount(RestaurantList, { global: { plugins: [store, PrimeVue] } });
   });
 
   it('loads restaurants on mount', () => {
