@@ -1,21 +1,24 @@
 <template>
-  <ul>
-    <li
-      :key="restaurant.id"
-      v-for="restaurant in restaurants"
-      data-testid="restaurant"
-    >
-      {{ restaurant.name }}
-    </li>
-  </ul>
+  <OrderList v-model="restaurants" dataKey="id">
+    <template #item="slotProps">
+      <span data-testid="restaurant">
+        {{ slotProps.item.name }}
+      </span>
+    </template>
+  </OrderList>
 </template>
 
 <script>
 import { computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
 
+import OrderList from 'primevue/orderlist';
+
 export default {
   name: 'RestaurantList',
+  components: {
+    OrderList,
+  },
 
   setup() {
     const store = useStore();
