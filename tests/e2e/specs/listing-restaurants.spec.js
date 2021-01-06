@@ -8,7 +8,9 @@ describe('Listing Restaurants', () => {
     cy.route({
       method: 'GET',
       url:
-        'https://outside-in-dev-api.herokuapp.com/bv9aTacizaOxbJ51vkbFryMB56MiaOes/restaurants',
+        'https://outside-in-dev-api.herokuapp.com/' +
+        Cypress.env('api_key') +
+        '/restaurants',
       response: [
         { id: 1, name: sushiPlace },
         { id: 2, name: pizzaPlace },

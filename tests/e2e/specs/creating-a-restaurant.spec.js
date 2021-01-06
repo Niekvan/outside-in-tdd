@@ -8,14 +8,18 @@ describe('Creating a Restaurant', () => {
     cy.route({
       method: 'GET',
       url:
-        'https://outside-in-dev-api.herokuapp.com/bv9aTacizaOxbJ51vkbFryMB56MiaOes/restaurants',
+        'https://outside-in-dev-api.herokuapp.com/' +
+        Cypress.env('api_key') +
+        '/restaurants',
       response: [],
     });
 
     cy.route({
       method: 'POST',
       url:
-        'https://outside-in-dev-api.herokuapp.com/bv9aTacizaOxbJ51vkbFryMB56MiaOes/restaurants',
+        'https://outside-in-dev-api.herokuapp.com/' +
+        Cypress.env('api_key') +
+        '/restaurants',
       response: {
         id: restaurantId,
         name: restaurantName,
